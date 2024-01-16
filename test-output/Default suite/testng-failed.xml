@@ -5,6 +5,7 @@
     <classes>
       <class name="com.qa.testCase.Amazon.TC_Login_001">
         <methods>
+          <include name="teardown"/>
           <include name="setup"/>
           <include name="loginTest"/>
         </methods>

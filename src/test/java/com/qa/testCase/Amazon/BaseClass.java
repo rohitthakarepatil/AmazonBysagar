@@ -5,11 +5,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.qa.Amazon.utilities.ReadConfig;
+
 public class BaseClass {
 
-    public String baseUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-    public String username = "Admin";
-    public String password = "admin123";
+	ReadConfig read=new ReadConfig();
+    public String baseUrl = read.getBaseUrl();
+    public String username = read.getUsername();
+    public String password = read.getPassword();
     public static WebDriver driver;
 
     @BeforeClass
